@@ -1,7 +1,7 @@
 FROM jelastic/storage
 MAINTAINER Jelastic
 ADD scripts/varnish-probe.php /data/
-RUN wget "https://goo.gl/J5mjRt"  \
+RUN wget "https://goo.gl/J5mjRt" -O /data/sample.tar.gz  \
   | tar -xvf /data
 #RUN tar -xvf /tmp/sample.tar.gz -C /data
 #tar -xvf /data/sample.tar.gz -C /data/; \
