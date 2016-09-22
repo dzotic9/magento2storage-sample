@@ -6,7 +6,7 @@ return array (
   ),
   'install' => 
   array (
-    'date' => 'Tue, 22 Mar 2016 23:34:20 +0000',
+    'date' => '',
   ),
   'crypt' => 
   array (
@@ -16,44 +16,6 @@ return array (
   array (
     'save' => 'memcache',
     'save_path' => 'tcp://'.gethostbyname('MEMCACHED').':11211'
-  ),
-  'cache' =>
-  array(
-   'frontend' =>
-   array(
-    'default' =>
-      array (
-        'backend' => 'Cm_Cache_Backend_Redis',
-        'backend_options' =>
-        array (
-          'server' => gethostbyname('REDIS'),
-          'password' => getenv('REDIS_PASSWORD'),
-          'port' => '6379',
-          'persistent' => '',
-          'database' => '1',
-          'force_standalone' => '0',
-          'connect_retries' => '1',
-          'read_timeout' => '10',
-          'automatic_cleaning_factor' => '0',
-          'compress_data' => '1',
-          'compress_tags' => '1',
-          'compress_threshold' => '20480',
-          'compression_lib' => 'gzip',
-        ),
-      ),
-    'page_cache' =>
-    array(
-      'backend' => 'Cm_Cache_Backend_Redis',
-      'backend_options' =>
-       array(
-         'server' => gethostbyname('REDIS'),
-         'port' => '6379',
-         'database' => '1',
-         'password' => getenv('REDIS_PASSWORD'),
-         'compress_data' => '1'
-       )
-    )
-  )
   ),
   'db' => 
   array (
