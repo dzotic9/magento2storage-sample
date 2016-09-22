@@ -3,7 +3,7 @@ MAINTAINER Jelastic
 WORKDIR /data
 ADD scripts/varnish-probe.php /data/
 ADD https://goo.gl/J5mjRt /data/sample.tar.gz
-RUN  tar -xf /data/sample.tar.gz
+RUN  tar -xvf /data/sample.tar.gz
 #RUN wget "https://goo.gl/J5mjRt" -O /data/sample.tar.gz  \
 #RUN tar -xvf /tmp/sample.tar.gz -C /data
 #tar -xvf /data/sample.tar.gz -C /data/; \
