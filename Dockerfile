@@ -9,7 +9,7 @@ ADD scripts/varnish-probe.php /data/
 ####RUN  tar -xf /tmp/sample.tar.gz -C /tmp
 #RUN  tar -xf /tmp/sample.tar.gz
 ####RUN ls /tmp
-COPY /dumps/* /data
+COPY /dumps/ /data
 #RUN mv /tmp/* /data/
 #COPY /tmp/* /data
 #RUN ls /tmp
