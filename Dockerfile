@@ -3,12 +3,13 @@ MAINTAINER Jelastic
 WORKDIR /data
 ADD scripts/varnish-probe.php /data/
 #RUN wget https://goo.gl/J5mjRt | tar -xC /data
-RUN wget https://goo.gl/J5mjRt -O /tmp/sample.tar.gz
+###RUN wget https://goo.gl/J5mjRt -O /tmp/sample.tar.gz
 #RUN wget "https://download.jelastic.com/public.php?service=files&t=c747a48632de2eac3edf2125a291423b&download" -O /tmp/sample.tar.gz
 
-RUN  tar -xf /tmp/sample.tar.gz -C /tmp
+####RUN  tar -xf /tmp/sample.tar.gz -C /tmp
 #RUN  tar -xf /tmp/sample.tar.gz
-RUN ls /tmp
+####RUN ls /tmp
+COPY /dumps/* /data
 #RUN mv /tmp/* /data/
 #COPY /tmp/* /data
 #RUN ls /tmp
