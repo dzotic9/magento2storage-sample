@@ -5,10 +5,11 @@ ADD scripts/varnish-probe.php /data/
 #RUN wget https://goo.gl/J5mjRt | tar -xC /data
 RUN wget https://goo.gl/J5mjRt -O /tmp/sample.tar.gz
 
-RUN  tar -xvf /tmp/sample.tar.gz -C /data
+RUN  tar -xf /tmp/sample.tar.gz
 #RUN  tar -xf /tmp/sample.tar.gz
-#RUN ls /tmp
+RUN ls /tmp
 #RUN mv /tmp/* /data/
+COPY /tmp/* /data
 #RUN ls /tmp
 RUN ls /data
 #RUN wget "https://goo.gl/J5mjRt" -O /data/sample.tar.gz  \
